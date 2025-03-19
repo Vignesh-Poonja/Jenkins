@@ -1,6 +1,5 @@
 # Jenkins
 
-## What is Jenkins?
 **Jenkins** is an **open-source automation server** that helps in **continuous integration (CI) and continuous delivery (CD)** of software. It automates building, testing, and deploying applications, making the software development process faster and more efficient.
 
 ## Key Features
@@ -16,11 +15,6 @@
 3. **Automated tests** are executed to check for issues.
 4. If successful, Jenkins **deploys the application** to a test or production environment.
 
-## Why Use Jenkins?
-- 🚀 Speeds up software development and deployment.
-- 🔍 Ensures **code quality** with automated testing.
-- 🤖 Reduces human errors by **automating repetitive tasks**.
-- ☁️ Works well with **DevOps and cloud environments**.
 
 ## Getting Started
 To install Jenkins on an AWS EC2 instance, follow these steps:
