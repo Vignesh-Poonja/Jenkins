@@ -1,5 +1,22 @@
 # Jenkins
 
+What is Jenkins?
+Jenkins is an open-source automation server that helps in continuous integration (CI) and continuous delivery (CD) of software. It automates building, testing, and deploying applications, making the software development process faster and more efficient.
+
+Key Features of Jenkins:
+✅ Automation: Eliminates manual effort in building and deploying applications.
+✅ Continuous Integration (CI): Automatically tests and integrates code from multiple developers.
+✅ Continuous Delivery (CD): Enables automatic deployment of applications.
+✅ Extensibility: Supports plugins for integration with tools like Git, Docker, Kubernetes, AWS, etc.
+✅ Scalability: Can distribute workloads across multiple machines for faster builds.
+
+How Jenkins Works?
+Developers push code to a version control system (like Git).
+Jenkins pulls the code and triggers a build.
+Automated tests are executed to check for issues.
+If successful, Jenkins deploys the application to a test or production environment.
+
+
 Install Jenkins, configure Docker as agent, set up cicd, deploy applications to k8s and much more.
 
 ### Install Jenkins.
