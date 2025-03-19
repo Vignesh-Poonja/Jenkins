@@ -48,7 +48,6 @@ To install Jenkins on an AWS EC2 instance, follow these steps:
 
 For more details, visit the **[official Jenkins documentation](https://www.jenkins.io/doc/)**.
 
-```
 
 **Note: ** By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
 
