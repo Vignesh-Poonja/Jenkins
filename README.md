@@ -1,54 +1,53 @@
 # Jenkins
 
-What is Jenkins?
-Jenkins is an open-source automation server that helps in continuous integration (CI) and continuous delivery (CD) of software. It automates building, testing, and deploying applications, making the software development process faster and more efficient.
+## What is Jenkins?
+**Jenkins** is an **open-source automation server** that helps in **continuous integration (CI) and continuous delivery (CD)** of software. It automates building, testing, and deploying applications, making the software development process faster and more efficient.
 
-Key Features of Jenkins:
-✅ Automation: Eliminates manual effort in building and deploying applications.
-✅ Continuous Integration (CI): Automatically tests and integrates code from multiple developers.
-✅ Continuous Delivery (CD): Enables automatic deployment of applications.
-✅ Extensibility: Supports plugins for integration with tools like Git, Docker, Kubernetes, AWS, etc.
-✅ Scalability: Can distribute workloads across multiple machines for faster builds.
+## Key Features
+- ✅ **Automation:** Eliminates manual effort in building and deploying applications.
+- ✅ **Continuous Integration (CI):** Automatically tests and integrates code from multiple developers.
+- ✅ **Continuous Delivery (CD):** Enables automatic deployment of applications.
+- ✅ **Extensibility:** Supports **plugins** for integration with tools like Git, Docker, Kubernetes, AWS, etc.
+- ✅ **Scalability:** Can distribute workloads across multiple machines for faster builds.
 
-How Jenkins Works?
-Developers push code to a version control system (like Git).
-Jenkins pulls the code and triggers a build.
-Automated tests are executed to check for issues.
-If successful, Jenkins deploys the application to a test or production environment.
+## How Jenkins Works?
+1. **Developers push code** to a version control system (like Git).
+2. **Jenkins pulls the code** and triggers a build.
+3. **Automated tests** are executed to check for issues.
+4. If successful, Jenkins **deploys the application** to a test or production environment.
 
+## Why Use Jenkins?
+- 🚀 Speeds up software development and deployment.
+- 🔍 Ensures **code quality** with automated testing.
+- 🤖 Reduces human errors by **automating repetitive tasks**.
+- ☁️ Works well with **DevOps and cloud environments**.
 
-Install Jenkins, configure Docker as agent, set up cicd, deploy applications to k8s and much more.
+## Getting Started
+To install Jenkins on an AWS EC2 instance, follow these steps:
+1. Update your system:
+   ```bash
+   sudo apt update && sudo apt upgrade -y
+   ```
+2. Install Java (required for Jenkins):
+   ```bash
+   sudo apt install openjdk-17-jdk -y
+   ```
+3. Add the Jenkins repository and install Jenkins:
+   ```bash
+   wget -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc
+   echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   sudo apt update
+   sudo apt install jenkins -y
+   ```
+4. Start and enable Jenkins:
+   ```bash
+   sudo systemctl start jenkins
+   sudo systemctl enable jenkins
+   ```
+5. Access Jenkins at: `http://<your-ec2-instance-ip>:8080`
 
-### Install Jenkins.
+For more details, visit the **[official Jenkins documentation](https://www.jenkins.io/doc/)**.
 
-Pre-Requisites:
- - Java (JDK)
-
-### Run the below commands to install Java and Jenkins
-
-Install Java
-
-```
-sudo apt update
-sudo apt install openjdk-17-jre
-```
-
-Verify Java is Installed
-
-```
-java -version
-```
-
-Now, you can proceed with installing Jenkins
-
-```
-curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
-  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
-echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-  https://pkg.jenkins.io/debian binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null
-sudo apt-get update
-sudo apt-get install jenkins
 ```
 
 **Note: ** By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
